@@ -1,7 +1,7 @@
 
 function play(playerChoice) {
 
-  let compChoice;
+  let compChoice = "rock";
   let winner;
   let player;
   let comp;
@@ -9,35 +9,47 @@ function play(playerChoice) {
 
   if (playerChoice === "rock") {
     if (compChoice === "scissors") {
-      winner = player;
+      // winner = player;
+      console.log("You win!");
     } else if (compChoice === "paper") {
-      winner = comp;
+      // winner = comp;
+      console.log("Welp, the computer won.");
     } else {
-      winner = draw;
+      // winner = draw;
+      console.log("It's a tie.");
+      console.log(winner);
     }
   }
 
   if (playerChoice === "paper") {
     if (compChoice === "rock") {
-      winner = player;
+      // winner = player;
+      console.log("You win!");
     } else if (compChoice === "scissors") {
-      winner = comp;
+      // winner = comp;
+      console.log("Welp, the computer won.");
     } else {
-      winner = draw;
+      // winner = draw;
+      console.log("It's a tie.");
+      console.log(winner);
     }
   }
 
   if (playerChoice === "scissors") {
     if (compChoice === "paper") {
-      winner = player;
+      // winner = player;
+      console.log("You won!");
     } else if (compChoice === "rock") {
-      winner = comp;
+      // winner = comp;
+      console.log("Welp, the computer won.");
     } else {
-      winner = draw;
+      // winner = draw;
+      console.log("It's a tie.");
+      console.log(winner);
     }
   }
 
-  return winner;
+  // return winner;
 
 }
 
