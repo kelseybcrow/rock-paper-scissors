@@ -18,17 +18,20 @@
   <header class="container-fluid">
     <div class="row bg-info text-light">
       <div class="col text-center m-4">
-        <h1>We <i class="fa fa-heart mx-2" aria-hidden="true"></i> us some good ol' Rock-Paper-Scissors action!</h1>
+        <h1>We <i class="fa fa-heart mx-2 fa-xs" aria-hidden="true"></i> us some good ol' <br> rock, paper, scissors
+        </h1>
       </div>
     </div>
   </header>
   <main class="container-fluid bg-light">
     <div class="row mt-5 text-center">
-      <div class="col-12" id="phrase">
-        <h3>________ won!</h3>
+      <div class="col text-light" id="buttons">
+        <button class="button bg-primary" onclick="play('rock')">Rock</button>
+        <button class="button bg-info" onclick="play('paper')">Paper</button>
+        <button class="button bg-secondary" onclick="play('scissors')">Scissors</button>
       </div>
-      <div class="col" id="buttons">
-
+      <div class="col-12" id="phrase">
+        <h1 class="mt-5">________ won!</h1>
       </div>
     </div>
   </main>

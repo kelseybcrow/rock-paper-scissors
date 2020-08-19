@@ -8,6 +8,8 @@ main {
   flex-grow: 1
 }
 
-#phrase img {
-  height: 200px
+.button {
+  min-height: 100px;
+  min-width: 200px;
+  font-size: large;
 }

@@ -1,55 +1,57 @@
+  let compChoice;
 
-function play(playerChoice) {
 
-  let compChoice = "rock";
-  let winner;
-  let player;
-  let comp;
-  let draw;
+  function createCompChoice() {
+
+    compChoice = Math.floor(Math.random() * 100);
+    if (compChoice < 30) {
+      compChoice = "rock"
+    } else if (compChoice > 60) {
+      compChoice = "paper";
+    } else {
+      compChoice = "scissors";
+    }
+
+  }
+
+  function play(playerChoice) {
+
+    createCompChoice();
+    let elem = document.getElementById("phrase");
+    let result = "";
 
   if (playerChoice === "rock") {
     if (compChoice === "scissors") {
-      // winner = player;
-      console.log("You win!");
+      result = "You win!";
     } else if (compChoice === "paper") {
-      // winner = comp;
-      console.log("Welp, the computer won.");
+      result = "Welp, the computer won.";
     } else {
-      // winner = draw;
-      console.log("It's a tie.");
-      console.log(winner);
+      result = "It's a tie.";
     }
   }
 
   if (playerChoice === "paper") {
     if (compChoice === "rock") {
-      // winner = player;
-      console.log("You win!");
+      result = "You win!";
     } else if (compChoice === "scissors") {
-      // winner = comp;
-      console.log("Welp, the computer won.");
+      result = "Welp, the computer won.";
     } else {
-      // winner = draw;
-      console.log("It's a tie.");
-      console.log(winner);
+      result = "It's a tie.";
     }
   }
 
   if (playerChoice === "scissors") {
     if (compChoice === "paper") {
-      // winner = player;
-      console.log("You won!");
+      result = "You won!";
     } else if (compChoice === "rock") {
-      // winner = comp;
-      console.log("Welp, the computer won.");
+      result = "Welp, the computer won.";
     } else {
-      // winner = draw;
-      console.log("It's a tie.");
-      console.log(winner);
+      result = "It's a tie.";
     }
   }
 
-  // return winner;
+  elem.innerHTML = ` <h1 class="mt-5">${result}</h1>
+  `;
 
 }
 
